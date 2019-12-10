@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<>>, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    请输入内容：<input type="text" oninput="input_change(this)">
+    <h1></h1>
+    <h2></h2>
+    <!--请做一个功能：在输入框中输入的内容动态展示h1标签中-->
+    <script>
+        //通过js实现
+        function input_change(input){
+            //将input的值赋给h1的innerHTML属性
+            var h1=document.querySelector("h1");
+            h1.innerHTML=input.value;
+
+            var h2=document.querySelector("h2");
+            h2.innerHTML=input.value.split("").reverse().join("");
+        }
+    </script>
+</body>
+</html>

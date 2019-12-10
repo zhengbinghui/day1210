@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- 引入vue的核心外部文件 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <input type="radio" value="one" name="meng" v-model="name" />民国
+        <input type="radio" value="two" name="meng" v-model="name" />罗西
+        <input type="radio" value="three" name="meng" v-model="name" />黄夏温
+        <img v-if="name=='one'" style="width:500px;height:500px;" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1575976875893&di=953b49baa75a8b828e48ec5a1e859bcd&imgtype=0&src=http%3A%2F%2Fimg.tukexw.com%2Fimg%2Ff3dfa48b1f444595.jpg">
+        <img v-else-if="name=='two'" style="width:500px;height:500px;" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1575977769247&di=031fbf09b3a6b9d73f5c14881aee7072&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F20185%2F9%2F201859211344_UKXNP.thumb.700_0.jpeg">
+        <img v-else-if="name=='three'" style="width:500px;height:500px;" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1575977788491&di=18ec19ba9919f63fd1ec4ba1382e0787&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201812%2F06%2F20181206111640_fFsQx.thumb.700_0.jpeg">
+        <img v-else style="width:500px;height:500px;" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1575977844378&di=9b5b107241e7e3ec353f938956e4a825&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201901%2F19%2F20190119230245_82skm.thumb.700_0.jpeg">
+    </div>
+    <script>
+        var app=new Vue({
+            el:"#app",
+            data:{
+                show:'false',
+                name:""
+            }
+        })
+    </script>
+</body>
+</html>
